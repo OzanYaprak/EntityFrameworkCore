@@ -14,6 +14,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseFirst", "DatabaseFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstByScaffold", "DatabaseFirstByScaffold\DatabaseFirstByScaffold.csproj", "{6D01B726-2FB7-4C44-879A-7B7A408CD98F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeFirst", "CodeFirst", "{52D634B7-7A0A-4618-8B17-C3BE089A2CC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{A3726B7E-EE7B-483A-BC9F-9218F5297E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,10 @@ Global
 		{6D01B726-2FB7-4C44-879A-7B7A408CD98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D01B726-2FB7-4C44-879A-7B7A408CD98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D01B726-2FB7-4C44-879A-7B7A408CD98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3726B7E-EE7B-483A-BC9F-9218F5297E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3726B7E-EE7B-483A-BC9F-9218F5297E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3726B7E-EE7B-483A-BC9F-9218F5297E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3726B7E-EE7B-483A-BC9F-9218F5297E5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{213175CC-B372-4CCF-843F-02F818183B7F} = {8CD503AC-ACE4-4104-BF45-169C97364AFA}
 		{6D01B726-2FB7-4C44-879A-7B7A408CD98F} = {8CD503AC-ACE4-4104-BF45-169C97364AFA}
+		{A3726B7E-EE7B-483A-BC9F-9218F5297E5F} = {52D634B7-7A0A-4618-8B17-C3BE089A2CC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B75B1224-F6EB-4A4A-93AC-A272CC090B0A}
