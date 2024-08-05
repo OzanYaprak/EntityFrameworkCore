@@ -14,6 +14,8 @@ namespace CodeFirst
 				var products = await _context.Products.ToListAsync();
 
 				products.ForEach(p => { Console.WriteLine($"{p.Id} : {p.Name} - {p.Price} - {p.Stock}"); });
+
+				//test
 			}
 		}
 	}
