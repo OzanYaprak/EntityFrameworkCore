@@ -1,0 +1,3 @@
+﻿
+
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=UdemyEFCoreDatabaseFirstDb;Integrated Security=True;Encrypt=False;Trust Server Certificate=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Project DatabaseFirstByScaffold

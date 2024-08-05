@@ -1,0 +1,36 @@
+
+-- Hafif, genisletilebilir ve open-source olan veri erisim teknolojisidir.
+
+ORM (Object-Relational Mapping) ;
+Orm bir veritabanina erisim teknigidir, bu teknik bilindik CRUD islemlerini yapmamiza imkan tanir.
+- Hibernate (Java)
+- Dapper 
+Yukarida ayni entity framework gibi bilindik veri erisim teknikleri yazilmistir.
+
+LINQ (Language Integrated Query)
+
+EF Core avantajlari nelerdir ? 
+- Veritabani ile tip guvenli bir sekilde calismamiza imkan saglar
+- Veritabani ile ilgili tum surecleri soyutlar
+- Kodun okunabilirligini arttirir
+- Kodun daha surdururebilir olmasina imkan saglar
+- Uygulama gelistirme suresini azaltir
+- SQL Injection gibi zafiyetlere karsi dogal korumasi vardir
+- Veritabani ile ilgili tum islemlerinizi kod icerisinden yapmaniza imkan verir
+
+
+EF Core dezavantajlari nelerdir ?
+- Veritabani ile ilgili tum sureci soyutladigindan dolayi biraz yavastir
+- EF Core tarafindan olusturulan querylere %100 mudahale edemeyiz
+
+EF Core hangi veritabanlari ile calisir ? 
+-SQL Server
+-PostgreSQL
+-MySQL
+-Oracle
+-SQLite
+-InMemory
+
+Entity Framework kullanarak uygulama insa etmek istedigimizde yapabilecegimiz yaklasimlar :
+1.Database First
+2.Code First
