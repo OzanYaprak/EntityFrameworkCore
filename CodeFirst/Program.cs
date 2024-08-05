@@ -5,17 +5,15 @@ namespace CodeFirst
 {
 	internal class Program
 	{
-		static async void Main(string[] args)
+		static void Main(string[] args)
 		{
 			Initilizer.Build();
 
 			using (var _context = new AppDbContext())
 			{
-				var products = await _context.Products.ToListAsync();
+				var products = _context.Products.ToList();
 
 				products.ForEach(p => { Console.WriteLine($"{p.Id} : {p.Name} - {p.Price} - {p.Stock}"); });
-
-				//test
 			}
 		}
 	}

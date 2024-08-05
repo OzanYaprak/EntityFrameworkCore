@@ -13,6 +13,7 @@ namespace CodeFirst.DataAccessLayer
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
+			Initilizer.Build();
 			optionsBuilder.UseSqlServer(Initilizer.Configuration.GetConnectionString("SQLConnection"));
 		}
 
