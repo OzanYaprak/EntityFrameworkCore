@@ -12,26 +12,46 @@ namespace CodeFirst
 
 			using (var _context = new AppDbContext())
 			{
-				var newProduct = new Product { Name = "Defter", Price = 200, Stock = 20, Barcode = 123 };
-				var updateProduct = _context.Products.First();
+				#region DbContext (ChangeTracker / ContextId / Database)
 
-				Console.WriteLine($"Ilk State : {_context.Entry(updateProduct).State}");
+				_context.Products.Add(new() { Name = "Defter", Price = 100, Stock = 5, Barcode = 123 });
+				_context.Products.Add(new() { Name = "Kalem", Price = 100, Stock = 5, Barcode = 123 });
+				_context.Products.Add(new() { Name = "Oyuncak", Price = 100, Stock = 5, Barcode = 123 });
 
-				updateProduct.Name = "Klavye";
-				updateProduct.Price = 555;
-				updateProduct.Stock = 0;
+                //Console.WriteLine($"Context Id = {_context.ContextId}");
 
-				// _context.Add(newProduct); // Kod buraya geldiginde artik ef core tarafindan memory de track edilmeye baslaniyor ve state artik Added olarak degisiyor
-				_context.Update(updateProduct);
-				//_context.Remove(updateProduct);
-
-				Console.WriteLine($"Ikinci State : {_context.Entry(newProduct).State}"); // State Added
-
-				_context.SaveChanges();
-
-				Console.WriteLine($"Son State : {_context.Entry(newProduct).State}");
+                _context.SaveChanges();
 
 
+				//var products = _context.Products.AsNoTracking().ToList(); // AsNoTracking() sql den gelen datanin Efcore tarafindan memory de track edilmemesini sagliyor.
+
+				//products.ForEach(x => {
+				//Console.WriteLine($"{x.Id} - {x.Name} {x.Price} {x.Stock}");
+				//});
+
+				#endregion
+				#region DbContext States
+
+				//var newProduct = new Product { Name = "Defter", Price = 200, Stock = 20, Barcode = 123 };
+				//var updateProduct = _context.Products.First();
+
+				//Console.WriteLine($"Ilk State : {_context.Entry(updateProduct).State}");
+
+				//updateProduct.Name = "Klavye";
+				//updateProduct.Price = 555;
+				//updateProduct.Stock = 0;
+
+				//// _context.Add(newProduct); // Kod buraya geldiginde artik ef core tarafindan memory de track edilmeye baslaniyor ve state artik Added olarak degisiyor
+				//_context.Update(updateProduct);
+				////_context.Remove(updateProduct);
+
+				//Console.WriteLine($"Ikinci State : {_context.Entry(newProduct).State}"); // State Added
+
+				//_context.SaveChanges();
+
+				//Console.WriteLine($"Son State : {_context.Entry(newProduct).State}");
+
+				#endregion
 				#region Eski kod
 				//var products = _context.Products.ToList();
 

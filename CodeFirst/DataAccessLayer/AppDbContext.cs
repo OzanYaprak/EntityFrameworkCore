@@ -16,8 +16,24 @@ namespace CodeFirst.DataAccessLayer
 			Initilizer.Build();
 			optionsBuilder.UseSqlServer(Initilizer.Configuration.GetConnectionString("SQLConnection"));
 		}
-
-
 		public DbSet<Product> Products { get; set; }
-    }
+
+		public override int SaveChanges()
+		{
+			ChangeTracker.Entries().ToList().ForEach(x =>
+			{
+				if (x.Entity is Product product)
+				{
+					if (x.State == EntityState.Added)
+					{
+						product.CreatedDate = DateTime.Now;
+					}
+				}
+
+			});
+
+			return base.SaveChanges();
+		}
+
+	}
 }
